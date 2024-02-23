@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "ListUser";
+}
+
+
+<div class="container-fluid body-content d-flex justify-content-center">
+    <div>
+     
+        <h2>ListUser</h2>
+        <hr />
+        <div>
+            <table class="border">
+
+                <tr class="border">
+                    <th class="border">Id</th>
+                    <th class="border">Icon</th>
+                    <th class="border">Account</th>
+                    <th class="border">Email</th>
+                    <th class="border">Name</th>
+                    <th class="border">CreatTime</th>
+                </tr>
+
+                @{
+                    foreach (var UserList in Model)
+                    {
+                        <tr class="border">
+                            <td class="border">@UserList.id</td>
+                            <td class="border"><img src="@UserList.icon" style="width:100px;height:100px" /></td>
+                            <td class="border">@UserList.userAccount</td>
+                            <td class="border">@UserList.email</td>
+                            <td class="border">@UserList.username</td>
+                            <td class="border">@UserList.createtime</td>
+                        </tr>
+
+                    }
+                }
+            </table>
+
+        </div>
+    </div>
